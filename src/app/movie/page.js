@@ -6,7 +6,7 @@ import axios from "axios";
 const Movie = async () => {
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
-  const url = "https://netflix54.p.rapidapi.com/search/";
+  const url = `${process.env.RAPID_KEY}/search/`;
   const options = {
     method: "GET",
     params: {

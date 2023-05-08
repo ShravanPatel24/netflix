@@ -18,16 +18,15 @@ const ContactForm = () => {
   });
   const [status, setStatus] = useState(null);
 
-  function handleChange(e) {
+  const handleChange = async (e) => {
     const name = e.target.name;
     const value = e.target.value;
 
     setUser((prevUser) => ({ ...prevUser, [name]: value }));
-  }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -39,7 +38,6 @@ const ContactForm = () => {
           message: user.message,
         }),
       });
-      // Set the status based on the response from the API route
       if (response.status === 200) {
         setUser({
           username: "",
@@ -51,8 +49,8 @@ const ContactForm = () => {
       } else {
         setStatus("error");
       }
-    } catch (e) {
-      console.log(e);
+    } catch (error) {
+      console.log(error);
     }
   };
 
