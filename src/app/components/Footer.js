@@ -124,7 +124,11 @@ const Footer = () => {
             <span className={footerStyles.copyright_text}>
               {" "}
               Copyright © 2023
-              <Link href="/>"> Netflix.</Link> All rights reserved{" "}
+              <Link href="https://www.netflix.com/in/" target="_blank">
+                {" "}
+                Netflix.
+              </Link>{" "}
+              All rights reserved{" "}
             </span>
             <span className={footerStyles.policy_terms}>
               <Link href="/">Privacy policy</Link>
