@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const MovieCard = (curElem) => {
-  const { id, type, title, synopsis } = curElem.jawSummary;
+  const { id, title, synopsis } = curElem.jawSummary;
 
   return (
     <>
